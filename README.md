@@ -8,7 +8,7 @@ Estudo e construção de modelos matemáticos na solução de problemas computac
 
 Seu primeiro trabalho nesta disiplina onsiste em explorar o padrão IEEE-754. Voê deve
 implementar um programa que cumpra as seguintes tarefas:
-1. Ele reebe pela linha de comando uma expressão no formato
+1. Ele recebe pela linha de comando uma expressão no formato
 val1 op val2
 onde op é uma operação (+, −, x, /) e val1 e val2 são dois valores em ponto flutuante, NaN
 ou ±∞.

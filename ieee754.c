@@ -16,7 +16,8 @@ void convertToBinaryRep(float value) {
 }
 
 
-// Função para realizar a operação e mostrar os resultados no padrão IEEE 754
+// Função para realizar a operação e mostrar os resultados no padrão IEEE 754 
+// e checar se alguma flag foi ativada, caso ocorra, mostrar qual foi
 void performOperation(float val1, char op, float val2) {
     float result;
 
@@ -41,21 +42,30 @@ void performOperation(float val1, char op, float val2) {
     }
 
     // Imrpime os valores e o resultado da operação
-    printf("Result %.6f %c %.6f = %.6f\n\n", val1, op, val2, result);
+   
+    // if(result == INFINITY){
+    //     printf("Result %.6f %c %.6f = INF\n\n", val1, op, val2);
+    // } else {
+    //     printf("Result %.6f %c %.6f = %.6f\n\n", val1, op, val2, result);
+    // }
+
+    
+    printf("Result = %.6f %c %.6f = %.6f\n\n", val1, op, val2, result);
+
 
     printf("val1 = ");
     convertToBinaryRep(val1);
-    printf(" = %.6f", val1);
+    printf(" = %.20f", val1);
     printf("\n");
 
     printf("val2 = ");
     convertToBinaryRep(val2);
-    printf(" = %.6f", val2);
+    printf(" = %.20f", val2);
     printf("\n");
 
     printf("res = ");
     convertToBinaryRep(result);
-    printf(" = %.6f", result);
+    printf(" = %.20f", result);
     printf("\n");
     printf("\n");
 

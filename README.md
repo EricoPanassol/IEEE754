@@ -10,7 +10,7 @@ Seu primeiro trabalho nesta disiplina onsiste em explorar o padrão IEEE-754. Vo
 implementar um programa que cumpra as seguintes tarefas:
 1. Ele recebe pela linha de comando uma expressão no formato
 val1 op val2
-onde op é uma operação (+, −, x, /) e val1 e val2 são dois valores em ponto flutuante, NaN
+onde op é uma operação (+, −, x ou X, /) e val1 e val2 são dois valores em ponto flutuante, NaN
 ou ±∞.
 2. Depois de receber a expressão seu programa deve realizar a operação op e mostrar o resultado
 dela;

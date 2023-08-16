@@ -5,7 +5,7 @@
 #include <math.h>
 
 
-// Função para imprimir a representação binária de um número em ponto flutuante
+// Função para imprimir a representação binária de um número em ponto flutuante no padrão IEEE754
 void convertToBinaryRep(float value) {
     uint32_t *ptr = (uint32_t *)&value;
     uint32_t bits = *ptr;
@@ -16,8 +16,13 @@ void convertToBinaryRep(float value) {
 }
 
 
-// Função para realizar a operação e mostrar os resultados no padrão IEEE 754 
-// e checar se alguma flag foi ativada, caso ocorra, mostrar qual foi
+// addition
+// subtraction
+// multiplication
+// division
+
+// Função para realizar a operação, mostrar os resultados no padrão IEEE 754 
+// e checar se alguma flag foi ativada para então, liga-lá
 void performOperation(float val1, char op, float val2) {
     float result;
 
@@ -40,7 +45,7 @@ void performOperation(float val1, char op, float val2) {
             result = val1 / val2;
             break;
         default:
-            printf("Invalid operation\nValids: +, -, x or (X), /\n");
+            printf("Invalid operation!\n\nYou can perform:\n+ (Addition)\n- (Subtraction)\nx or (X) (Multiplication)\n/ (Division)\n");
             return;
     }
 
@@ -51,10 +56,8 @@ void performOperation(float val1, char op, float val2) {
     // } else {
     //     printf("Result %.6f %c %.6f = %.6f\n\n", val1, op, val2, result);
     // }
-
     
     printf("Result = %.6f %c %.6f = %.6f\n\n", val1, op, val2, result);
-
 
     printf("val1 = ");
     convertToBinaryRep(val1);

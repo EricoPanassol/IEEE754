@@ -59,3 +59,11 @@ Após o programa ser compilado, basta executar o seguinte comando no terminal:
 ```bash
 ./ieee754 val1 op val2
 ```
+
+As operações (**op**) válidas são as seguintes
+
+1. \+ (Soma)
+2. \- (Subtração)
+3. x ou X (Multiplicação)
+4. / (Divisão)
+

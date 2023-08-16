@@ -33,11 +33,14 @@ void performOperation(float val1, char op, float val2) {
         case 'x':
             result = val1 * val2;
             break;
+        case 'X':
+            result = val1 * val2;
+            break;
         case '/':
             result = val1 / val2;
             break;
         default:
-            printf("Invalid operation\nValids: +, -, x, /\n");
+            printf("Invalid operation\nValids: +, -, x or (X), /\n");
             return;
     }
 

@@ -5,7 +5,14 @@
 #include <math.h>
 
 
-// Função para imprimir a representação binária de um número em ponto flutuante no padrão IEEE754
+// +***************************************+
+// |     Author: Érico Riess Panazzolo     |
+// |     Registration: 212012290-8         |
+// |     Date: 08/10/2023 - 08/17/2023     |
+// +***************************************+
+
+
+// Function to print the binary representation of a floating point number in the IEEE754 standard
 void convertToBinaryRep(float value) {
     uint32_t *ptr = (uint32_t *)&value;
     uint32_t bits = *ptr;
@@ -15,12 +22,12 @@ void convertToBinaryRep(float value) {
     }
 }
 
-// Função para realizar a operação, mostrar os resultados no padrão IEEE 754 
-// e checar se alguma flag foi ativada para então, liga-lá
+// Function to perform the operation, display the results in the IEEE 754 standard,
+// and check if any flag was activated to turn it on
 void performOperation(float val1, char op, float val2) {
     float result;
 
-    feclearexcept(FE_ALL_EXCEPT); // Limpa as exceções pendentes
+    feclearexcept(FE_ALL_EXCEPT); // Clear pending exceptions
 
     switch (op) {
         case '+':
@@ -43,7 +50,7 @@ void performOperation(float val1, char op, float val2) {
             return;
     }
 
-    // Imrpime os valores e o resultado da operação
+    // Print the values ​​and result of the operation
     printf("Result = %.26f %c %.26f = %.26f\n\n", val1, op, val2, result);
 
     printf("val1 = ");
@@ -62,7 +69,7 @@ void performOperation(float val1, char op, float val2) {
     printf("\n");
     printf("\n");
 
-    // Verifica se ocorreu alguma exceção E qual foi, se sim, ativa a flag
+    // Check if any exception occurred and what was it, if so, activate the flag
     if (fetestexcept(FE_INEXACT)) {
         printf("Exception FE_INEXACT: 1\n");
     } else {
@@ -95,7 +102,7 @@ void performOperation(float val1, char op, float val2) {
 }
 
 
-// Função principal que recebe os argumentos pela linha de comando e chama a função performOperation
+// Main function that receives arguments from the command line and calls the performOperation function
 int main(int argc, char *argv[]) {
     if (argc != 4) {
         printf("Usage: %s val1 op val2\n", argv[0]);
